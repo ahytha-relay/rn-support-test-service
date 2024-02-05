@@ -1,0 +1,31 @@
+{
+  "name": "rn-support-test-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahytha-relay/rn-support-test-service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahytha-relay/rn-support-test-service/issues"
+  },
+  "homepage": "https://github.com/ahytha-relay/rn-support-test-service#readme",
+  "dependencies": {
+    "fastify": "^4.25.2",
+    "fastify-plugin": "^4.5.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
