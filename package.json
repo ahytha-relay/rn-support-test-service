@@ -2,10 +2,19 @@
   "name": "rn-support-test-service",
   "version": "1.0.0",
   "description": "",
-  "main": "src/main.js",
-  "type": "module",
+  "source": "src/main.ts",
+  "main": "dist/main.js",
+  "targets": {
+    "main": {
+      "context": "node",
+      "includeNodeModules": {}
+    }
+  },
   "scripts": {
-    "start": "node src/main.js",
+    "start": "tsx src/main.ts",
+    "watch": "parcel watch",
+    "build": "parcel build",
+    "run": "node --enable-source-maps dist/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +35,8 @@
     "uuid": "^9.0.1"
   },
   "devDependencies": {
-    "nodemon": "^3.0.3"
+    "nodemon": "^3.0.3",
+    "parcel": "^2.11.0",
+    "tsx": "^4.7.1"
   }
 }

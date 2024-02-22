@@ -6,6 +6,7 @@ export function Healthcheck(
   done: () => void,
 ) {
   server.get('/healthcheck', {}, async function (request, reply) {
+    throw new Error("fake err");
     return reply.code(200).send();
   });
   done();
