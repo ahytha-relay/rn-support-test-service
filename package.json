@@ -2,18 +2,14 @@
   "name": "rn-support-test-service",
   "version": "1.0.0",
   "description": "",
-  "source": "src/main.ts",
-  "main": "dist/main.js",
-  "targets": {
-    "main": {
-      "context": "node",
-      "includeNodeModules": {}
-    }
+  "type": "module",
+  "tsup": {
+    "format": "esm",
+    "sourcemap": true
   },
   "scripts": {
-    "start": "node --enable-source-mapst dist/main.js",
-    "watch": "parcel watch",
-    "build": "parcel build",
+    "start": "node dist/main.js",
+    "build": "tsup src/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -35,7 +31,7 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.3",
-    "parcel": "^2.11.0",
-    "tsx": "^4.7.1"
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
   }
 }
